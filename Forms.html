@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
+
     
     <body>
+      <style>
+        *{
+          font-size: 12px;
+          line-height: 1;
+        }
+      </style>
+
         <!-- Navbar -->
         <nav class="navbar navbar-light bg-primary mb-5">
                 <a class="navbar-brand" href="#">
@@ -82,12 +89,12 @@
           </h4>
           <ul class="list-group mb-3">
 
-                <label for="project">Projekt</label>
+                <label for="project"><small>Projekt</small></label>
                 <input type="text" class="form-control" id="project" placeholder="Skriv ett projekt..." value="" required>
             </ul>
             <hr class="mb-3">
 <!-- Viktiga datum -->
-<!-- Show these fields in modalbox -->
+
             <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Viktiga datum</span>
                     <i class="fas fa-plus-circle"></i>
@@ -110,14 +117,14 @@
             <div class="row">
 
               <div class="col-md-6 mb-3">
-                <label for="date">Datum</label>
+                <label for="date"><small>Datum</small></label>
                 <input type="date" class="form-control" id="date" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid Date is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="project">Projekt</label>
+                <label for="project"><small>Projekt</small></label>
                 <input type="text" class="form-control" id="project" placeholder="Skriv ett projekt namn..." value="" required>
                 <div class="invalid-feedback">
                   Valid Projekt name is required.
@@ -126,7 +133,7 @@
             </div>
     
             <div class="mb-3">
-              <label for="text">Projekt beskrivning</label>
+              <label for="text"><small>Projekt beskrivning</small></label>
               <div class="input-group">
                     <textarea class="form-control " id="validationTextarea" placeholder="Skriv Projekt beskrivning" required></textarea>
                     <div class="invalid-feedback">
@@ -137,7 +144,7 @@
 <!-- Ort/Region -->
             <div class="row">
                 <div class="col-md-6 mb-3">
-                        <label for="text">Ort </label>
+                        <label for="text"><small>Ort</small> </label>
                         <input type="text" class="form-control" id="email" placeholder="Skriv en ort...">
                         <div class="invalid-feedback">
                             Please enter a valid email address for shipping updates.
@@ -145,7 +152,7 @@
                 </div>
                 
                 <div class="col-md-6 mb-3">
-                        <label for="Region">Region</label>
+                        <label for="Region"><small>Region</label>
                         <select class="custom-select d-block w-100" id="region" required>
                           <option value="">Välj en region...</option>
                           <option>Stockholm</option>
@@ -199,7 +206,7 @@ Show in projekt/Anbud list projekt/anbud without employee -->
 
             <div class="row">
                 <div class="col-md-12 mb-3">
-                    <label for="customer">Sök en kund</label>
+                    <label for="customer"><small>Sök en kund</small></label>
                     <input type="text" class="form-control" id="customer" placeholder="Sök en kund här...">
                 </div>        
             </div>
@@ -210,11 +217,11 @@ Show in projekt/Anbud list projekt/anbud without employee -->
 <h4 class="mb-3">Verksamhetsklass & Märkning</h4>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="verksamhet">Verksamhetsklass</label>
+                    <label for="verksamhet"><small>Verksamhetsklass</small></label>
                     <input type="text" class="form-control" id="verksamhetsklass" placeholder="Skriv verksamhetsklass här...">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="markning">Märkning</label>
+                    <label for="markning"><small>Märkning/small></label>
                     <input type="text" class="form-control" id="markning" placeholder="Skriv märkning här...">
                 </div>
             </div>
@@ -224,7 +231,7 @@ Show in projekt/Anbud list projekt/anbud without employee -->
 <h4 class="mb-3">Prislista</h4>
             <div class="row">
                 <div class="col-md-12 mb-3">
-                    <label for="prislista">Prislista</label>
+                    <label for="prislista"><small>Prislista</small></label>
                     <select class="custom-select d-block w-100" id="region" required>
                         <!-- Show default pricelist here -->
                         <option value="deafult">Prislista Default 2019</option>
