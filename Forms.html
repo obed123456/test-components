@@ -14,8 +14,12 @@
       <style>
         *{
           font-size: 12px;
-          line-height: 1;
+          line-height: 0.8;
         }
+        /* .bk-border{
+          border-bottom: 5px solid red;;
+          width: 40%;
+        } */
       </style>
 
         <!-- Navbar -->
@@ -28,12 +32,13 @@
     <div class="container ">
     <!-- Choose employee -->
       <div class="row">
+
           <!-- Status -->
         <div class="col-md-4 order-md-2 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="d-flex justify-content-between align-items-center mb-3">
                 <!-- Show correct icon according to correct status -->
                 <span class="text-muted">Status   <i class="fas fa-exclamation-triangle"></i></span>
-            </h4>
+            </h5>
         <ul class="list-group mb-3">
 
             <select class="custom-select d-block w-100" id="country" required>
@@ -46,10 +51,10 @@
         <hr class="mb-3">
 
         <!-- Uppgifter om ansvariga -->
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Uppgifter om Ansvariga</span>
             <span class="badge badge-secondary badge-pill">3/4</span>
-          </h4>
+          </h5>
           <ul class="list-group mb-3">
             <li class="list-group-item d-flex justify-content-between bg-light">
               <div class="text-success">
@@ -68,7 +73,7 @@
             <li class="list-group-item d-flex justify-content-between bg-light">
                 <div class="text-success">
                     <h6 class="my-0">Jan Eriksson</h6>
-                    <small>Resurs</small>
+                    <small>IK</small>
                 </div>
 
               <span ><i class="far fa-edit"></i></span>
@@ -84,9 +89,9 @@
           <hr class="mb-3">
 
 <!-- Koppla projekt -->
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Koppla projekt</span>
-          </h4>
+          </h5>
           <ul class="list-group mb-3">
 
                 <label for="project"><small>Projekt</small></label>
@@ -95,10 +100,10 @@
             <hr class="mb-3">
 <!-- Viktiga datum -->
 
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Viktiga datum</span>
                     <i class="fas fa-plus-circle"></i>
-            </h4>
+            </h5>
             <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between bg-warning">
                     <div>
@@ -112,7 +117,8 @@
 
 <!-- Projekt/Anbud information -->
         <div class="col-md-8 order-md-1">
-          <h4 class="mb-3">Beställningsuppgifter</h4>
+          <h5 class="mb-3">Beställningsuppgifter</h5>
+
           <form class="needs-validation" novalidate>
             <div class="row">
 
@@ -178,7 +184,7 @@
 
                 <hr class="mb-4">
 <!-- Kund info -->
-<h4 class="mb-3">Kunduppgifter</h4>
+<h5 class="mb-3">Kunduppgifter</h5>
 
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -214,21 +220,21 @@ Show in projekt/Anbud list projekt/anbud without employee -->
             <hr class="mb-4">
 
 <!-- Verksamhetsklass -->
-<h4 class="mb-3">Verksamhetsklass & Märkning</h4>
+<h5 class="mb-3">Verksamhetsklass & Märkning</h5>
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="verksamhet"><small>Verksamhetsklass</small></label>
                     <input type="text" class="form-control" id="verksamhetsklass" placeholder="Skriv verksamhetsklass här...">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="markning"><small>Märkning/small></label>
+                    <label for="markning"><small>Märkning</small></label>
                     <input type="text" class="form-control" id="markning" placeholder="Skriv märkning här...">
                 </div>
             </div>
             <hr class="mb-4">
 
 <!-- Prislista -->
-<h4 class="mb-3">Prislista</h4>
+<h5 class="mb-3">Prislista</h5>
             <div class="row">
                 <div class="col-md-12 mb-3">
                     <label for="prislista"><small>Prislista</small></label>
