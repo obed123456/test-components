@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Order</title>
+</head>
+
+    
+    <body>
+      <style>
+        *{
+          font-size: 12px;
+          line-height: 0.8;
+        }
+        /* .bk-border{
+          border-bottom: 5px solid red;;
+          width: 40%;
+        } */
+      </style>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-primary mb-5">
+                <a class="navbar-brand" href="#">
+                  <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                  <h5 class="text-light">BOS</h5>
+                </a>
+        </nav>
+    <div class="container-fluid">
+    <!-- Choose employee -->
+      <div class="row">
+
+          <!-- Status -->
+        <div class="col-md-4 order-md-2 mb-4">
+            <h5 class="d-flex justify-content-between align-items-center mb-3">
+                <!-- Show correct icon according to correct status -->
+                <!-- <span class="text-muted">Status   <i class="fas fa-exclamation-triangle"></i></span>
+            </h5>
+        <ul class="list-group mb-3">
+
+            <select class="custom-select d-block w-100" id="country" required>
+                <option>Ej Fördelat</option>
+                <option>Fördelat, Uppdragsbekeäftelse ej skickat</option>
+                <option>Fördelat, Uppdragsbekräftelse ej skickat</option>
+                <option>Tas ej</option>
+            </select>
+        </ul>
+        <hr class="mb-3"> -->
+
+        <!-- Uppgifter om ansvariga -->
+          <h5 class="d-flex justify-content-between align-items-center mb-3">
+            <!-- <span class="text-muted">Uppgifter om Ansvariga</span>
+            <span class="badge badge-secondary badge-pill">3/4</span> -->
+          </h5>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div>
+                <h6 class="my-0">Behöver kund</h6>
+                <small>Kartonger, Flyttstädning</small>
+              </div>
+              <span ><i class="fas fa-plus-circle"></i></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div>
+                <h6 class="my-0">Sett oss</h6>
+                <small >Facebook</small>
+              </div>
+              <span ><i class="fas fa-plus-circle"></i></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+                <div>
+                    <h6 class="my-0">Arbetsbeskrivning</h6>
+                    <small>IK</small>
+                </div>
+
+                <span ><i class="fas fa-plus-circle"></i></span>
+                
+            </li>
+          </ul>
+          <hr class="mb-3">
+
+<!-- Price information -->
+<h5 class="d-flex justify-content-between align-items-center mb-3">
+    <span><h5>Artiklar<span class="ml-2"><i class="fas fa-plus-circle"></i></span></h5></span>
+    <span class="badge badge-secondary badge-pill">Skattereduktion</span>
+  </h5>
+<div class="mb-3">
+    <ul class="list-group list-group-flush ">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+              <h6 class="my-0">2 man + bil</h6>
+              <small>5 tim</small>
+            </div>
+            <div>        
+              <p>500 kr<span class="ml-2"><i class="fas fa-trash"></i></span></p>
+            </div>
+          </li>
+    </ul>
+    <ul class="list-group list-group-flush bg-light">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+              <h6 class="my-0">Framkörningsavgift</h6>
+              <small>1 st</small>
+            </div>
+            <div>        
+              <p>200 kr<span class="ml-2"><i class="fas fa-trash"></i></span></p>
+            </div>
+          </li>
+    </ul>
+    <ul class="list-group list-group-flush bg-light">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+              <h6 class="my-0">Framkörningsavgift</h6>
+              <small>1 st</small>
+            </div>
+            <div>        
+              <p>200 kr<span class="ml-2"><i class="fas fa-trash"></i></span></p>
+            </div>
+          </li>
+    </ul>
+    <ul class="list-group list-group-flush bg-light">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+              <h6 class="my-0">Framkörningsavgift</h6>
+              <small>1 st</small>
+            </div>
+            <div>        
+              <p>200 kr<span class="ml-2"><i class="fas fa-trash"></i></span></p>
+            </div>
+          </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <small>Moms</small>
+                    </div>
+                    <h6 class="my-0">1000 kr</h6>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <small>Skattereduktion</small>
+                    </div>
+                    <h6 class="my-0">2500 kr</h6>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <small>Total</small>
+                    </div>
+                    <h6 class="my-0">5000 kr</h6>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-dark">
+                    <div class="text-light">
+                        <h5>Att betala</h5>
+                    </div>
+                    <h5 class="my-0 text-light">2500 kr</h5>
+            <!-- <span ><i class="far fa-edit"></i></span> -->
+            </li>
+            </ul> 
+        </div>
+
+<!-- Projekt/Anbud information -->
+        <div class="col-md-8 order-md-1 ">
+          <h5 class="mb-3">Beställningsuppgifter</h5>
+
+          <form class="needs-validation" novalidate>
+            <div class="row bg-light">
+
+              <div class="col-md-3 mb-3">
+                <label for="date"><small>Order datum</small></label>
+                <input type="date" class="form-control" id="date" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid Date is required.
+                </div>
+              </div>
+              <div class="col-md-9 mb-3">
+                <label for="project"><small>Tjänst</small></label>
+                <input type="text" class="form-control" id="project" placeholder="Sök en tjänst..." value="" required>
+                <div class="invalid-feedback">
+                  Obligatorisk fält.
+                </div>
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <label for="text"><small>Beskrivning</small></label>
+              <div class="input-group">
+                    <textarea class="form-control " id="validationTextarea" placeholder="Skriv Projekt beskrivning"></textarea>
+                    <div class="invalid-feedback">
+                      Please enter a message in the textarea.
+                    </div>
+              </div>
+            </div>
+<!-- Adress -->
+          <h5 class="mb-3">Kunduppgifter</h5>
+            <div class="row bg-light">
+                <div class="col-md-3 mb-3">
+                  <label for="customer"><small>Kund</small> </label>
+                  <input type="text" class="form-control" id="customer" placeholder="Sök en kund...">
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="personalnumber"><small>Person/Org. #</small> </label>
+                  <input type="text" class="form-control" id="email" placeholder="Person#/Organisationsnummer">
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="text"><small>Email</small> </label>
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="text"><small>Mobil</small> </label>
+                  <input type="text" class="form-control" id="email" placeholder="Mobil">
+                </div>
+            </div>
+
+<!-- Adress details -->
+            <h5 class="mb-3 ">Adressuppgifter</h5>
+            <div class="row bg-light">
+              <div class="col-md-4 mb-3">
+                <label for="customer"><small>Adress title</small> </label>
+                <input type="text" class="form-control" id="customer" placeholder="Välj adress...">
+              </div>
+              <div class="col-md-8 mb-3">
+                <label for="personalnumber"><small>Adress</small> </label>
+                <input type="text" class="form-control" id="email" placeholder="Person#/Organisationsnummer">
+              </div>
+              <div class="col-md-1 mb-3">
+                <label for="text"><small>Rum</small> </label>
+                <input type="email" class="form-control" id="email" placeholder="Rum">
+              </div>
+              <div class="col-md-1 mb-3">
+                <label for="text"><small>Boyta</small> </label>
+                <input type="text" class="form-control" id="email" placeholder="Boyta">
+              </div>
+              <div class="col-md-1 mb-3">
+                <label for="text"><small>Källare/Vind</small> </label>
+                <input type="text" class="form-control" id="email" placeholder="Källare/vind">
+              </div>
+              <div class="col-md-1 mb-3">
+                <label for="text"><small>Trappor</small> </label>
+                <input type="text" class="form-control" id="email" placeholder="Trappor">
+              </div>
+              <div class="col-md-1 mb-3">
+                <label for="text"><small>Övergård</small> </label>
+                <input type="text" class="form-control" id="email" placeholder="Övergård">
+              </div>
+              <div class="col-md-1 mb-3">
+                <label for="text"><small>Hiss</small> </label>
+                <input type="text" class="form-control" id="email" placeholder="Hiss Storlek">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="text"><small>Övrigt</small> </label>
+                <input type="text" class="form-control" id="email" placeholder="Mobil">
+              </div>
+          </div>
+
+<!-- Viktiga tider -->
+    <!-- Show these information in modalbox -->
+            <!-- <div class="row">
+                    <div class="col-md-6 mb-3">
+                            <label for="date">Datum </label>
+                            <input type="date" class="form-control" id="date" placeholder="Välj datum">
+                    </div>
+                    
+                    <div class="col-md-6 mb-3">
+                            <label for="Region">Info</label>
+                            <input type="text" class="form-control" id="info" placeholder="Skriv info här...">
+                    </div>
+                </div> -->
+
+                <hr class="mb-4">
+<!-- Kund info -->
+<h5 class="mb-3">Anställd(a)</h5>
+
+
+
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label for="customer"><small>Anställd</small></label>
+                    <input type="text" class="form-control" id="customer" placeholder="Välj antal anställda...">
+                </div>        
+                <div class="col-md-3 mb-3">
+                    <label for="Price"><small>Pris</small></label>
+                    <input type="text" class="form-control" id="customer" placeholder="Skriv ett pris här...">
+                </div>      
+                <div class="col-md-3 mb-3">
+                    <label for="customer"><small>Husarbete</small></label>
+                    <input type="text" class="form-control" id="customer" placeholder="Välj RUT/ROT...">
+                </div>      
+                <div class="col-md-3 mb-3">
+                    <label for="rut-rot"><small>Inkl.moms</small></label>
+                    <input type="checkbox" class="form-control" id="rut-rot" placeholder="Sök en anställd här...">
+                </div>      
+            </div>
+    
+            <hr class="mb-4">
+
+
+
+
+
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Spara</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer goes here -->
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
