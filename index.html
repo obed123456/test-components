@@ -229,10 +229,18 @@
                 <label for="customer"><small>Adress title</small> </label>
                 <input type="text" class="form-control" id="customer" placeholder="Välj adress...">
               </div>
-              <div class="col-md-8 mb-3">
+
+              <div class="col-md-7 mb-3">
                 <label for="personalnumber"><small>Adress</small> </label>
-                <input type="text" class="form-control" id="email" placeholder="Person#/Organisationsnummer">
+                <input type="text" class="form-control" id="adress" placeholder="Adress">
               </div>
+
+              <div class="col-md-1 d-flex">
+                <span class="align-self-center"><i class="fas fa-plus-circle"></i></span>
+              </div>
+
+<!-- Below comment out will go in modal -->
+<!-- 
               <div class="col-md-1 mb-3">
                 <label for="text"><small>Rum</small> </label>
                 <input type="email" class="form-control" id="email" placeholder="Rum">
@@ -260,7 +268,8 @@
               <div class="col-md-6 mb-3">
                 <label for="text"><small>Övrigt</small> </label>
                 <input type="text" class="form-control" id="email" placeholder="Mobil">
-              </div>
+              </div> -->
+
           </div>
 
 <!-- Viktiga tider -->
@@ -283,28 +292,44 @@
 
 
 
-            <div class="row">
-                <div class="col-md-3 mb-3">
-                    <label for="customer"><small>Anställd</small></label>
+            <div class="row bg-light">
+                <div class="col-md-2 mb-3 ">
+                    <label for="customer"><small>Antal anställd</small></label>
                     <input type="text" class="form-control" id="customer" placeholder="Välj antal anställda...">
                 </div>        
-                <div class="col-md-3 mb-3">
+                <div class="col-md-2 mb-3">
                     <label for="Price"><small>Pris</small></label>
                     <input type="text" class="form-control" id="customer" placeholder="Skriv ett pris här...">
                 </div>      
-                <div class="col-md-3 mb-3">
+                <div class="col-md-2 mb-3">
                     <label for="customer"><small>Husarbete</small></label>
                     <input type="text" class="form-control" id="customer" placeholder="Välj RUT/ROT...">
                 </div>      
-                <div class="col-md-3 mb-3">
+                <div class="col-md-1 mb-3">
                     <label for="rut-rot"><small>Inkl.moms</small></label>
-                    <input type="checkbox" class="form-control" id="rut-rot" placeholder="Sök en anställd här...">
+                    <input type="checkbox" class="form-control">
                 </div>      
             </div>
     
             <hr class="mb-4">
 
+<!-- Employee time -->
+            <div class="row bg-light">
+              <div class="col-md-3 mb-3">
+                  <label for="customer"><small>Anställd</small></label>
+                  <input type="text" class="form-control" id="customer" placeholder="Välj en anställda...">
+              </div>  
+              <div class="col-md-6 mb-3">
+                  <label for="customer"><small>Anställd</small></label>
+                  <input type="text" class="form-control" id="customer" placeholder="Välj antal anställda...">
+              </div>  
+              <div class="col-md-3 mb-3">
+                  <label for="customer"><small>Kommentar</small></label>
+                  <input type="text" class="form-control" id="customer" placeholder="Skriv en kommentar">
+              </div>  
 
+
+            </div>
 
 
 
