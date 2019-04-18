@@ -16,75 +16,86 @@
           font-size: 12px;
           line-height: 0.8;
         }
-        /* .bk-border{
-          border-bottom: 5px solid red;;
-          width: 40%;
-        } */
       </style>
 
-        <!-- Navbar -->
+        <!-- Navbar test  -->
         <nav class="navbar navbar-light bg-primary mb-5">
                 <a class="navbar-brand" href="#">
-                  <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                   <h5 class="text-light">BOS</h5>
                 </a>
         </nav>
     <div class="container-fluid">
-    <!-- Choose employee -->
+
       <div class="row">
-
-          <!-- Status -->
+          <!-- Customer Required -->
+          <!-- Right section -->
         <div class="col-md-4 order-md-2 mb-4">
-            <h5 class="d-flex justify-content-between align-items-center mb-3">
-                <!-- Show correct icon according to correct status -->
-                <!-- <span class="text-muted">Status   <i class="fas fa-exclamation-triangle"></i></span>
-            </h5>
-        <ul class="list-group mb-3">
-
-            <select class="custom-select d-block w-100" id="country" required>
-                <option>Ej Fördelat</option>
-                <option>Fördelat, Uppdragsbekeäftelse ej skickat</option>
-                <option>Fördelat, Uppdragsbekräftelse ej skickat</option>
-                <option>Tas ej</option>
-            </select>
-        </ul>
-        <hr class="mb-3"> -->
-
-        <!-- Uppgifter om ansvariga -->
-          <h5 class="d-flex justify-content-between align-items-center mb-3">
-            <!-- <span class="text-muted">Uppgifter om Ansvariga</span>
-            <span class="badge badge-secondary badge-pill">3/4</span> -->
-          </h5>
           <ul class="list-group mb-3">
             <li class="list-group-item d-flex justify-content-between bg-light">
               <div>
                 <h6 class="my-0">Behöver kund</h6>
                 <small>Kartonger, Flyttstädning</small>
               </div>
-              <span ><i class="fas fa-plus-circle"></i></span>
+              <span data-toggle="modal" data-target="#customerNeed"><i class="fas fa-plus-circle"></i></span>
             </li>
             <li class="list-group-item d-flex justify-content-between bg-light">
               <div>
                 <h6 class="my-0">Sett oss</h6>
                 <small >Facebook</small>
               </div>
-              <span ><i class="fas fa-plus-circle"></i></span>
+              <span data-toggle="modal" data-target="#seenUs"><i class="fas fa-plus-circle"></i></span>
             </li>
             <li class="list-group-item d-flex justify-content-between bg-light">
                 <div>
                     <h6 class="my-0">Arbetsbeskrivning</h6>
                     <small>IK</small>
                 </div>
-
-                <span ><i class="fas fa-plus-circle"></i></span>
-                
+                <span data-toggle="modal" data-target="#workDescription"><i class="fas fa-plus-circle"></i></span>
             </li>
           </ul>
           <hr class="mb-3">
 
+          <!-- Invoicing Method -->
+          <h5>Faktureringsuppgifter</h5>
+          <div class="row">
+              <div class="col-md-6 mb-3">
+                  <label for=""><small>Fakturatyp</small></label>
+                  <select class="custom-select d-block w-100" id="" required>
+                      <option>Faktura</option>
+                      <option>Kontantfaktura</option>
+                  </select>
+              </div>
+
+              <!-- if(user choose Kontantfaktura) then show  below options -->
+
+              <!-- <div class="col-md-6 mb-3">
+                  <label for="ob"><small>Betalsätt</small></label>
+                  <select class="custom-select d-block w-100" id="ob-type" >
+                      <option>Kontant</option>
+                      <option>Kort</option>
+                      <option>Autogiro</option>
+                      <option>Swish</option>
+                  </select>
+              </div> --> 
+          </div>
+          <div class="row">
+              <div class="col-md-6 mb-3">
+                  <label for="customer"><small>Husarbete</small></label>
+                  <select class="custom-select d-block w-100" id="">
+                      <option></option>
+                      <option>RUT</option>
+                      <option>ROT</option>
+                  </select>
+              </div>      
+              <div class="col-md-6 mb-3">
+                  <label for="rut-rot"><small>Inkl.moms</small></label>
+                  <input type="checkbox" class="form-control">
+              </div> 
+          </div>
+          <hr class="mb-3">
 <!-- Price information -->
 <h5 class="d-flex justify-content-between align-items-center mb-3">
-    <span><h5>Artiklar<span class="ml-2"><i class="fas fa-plus-circle"></i></span></h5></span>
+    <span><h5>Artiklar<span class="ml-2" data-toggle="modal" data-target="#addItems"><i class="fas fa-plus-circle"></i></span></h5></span>
     <span class="badge badge-secondary badge-pill">Skattereduktion</span>
   </h5>
 <div class="mb-3">
@@ -135,11 +146,6 @@
 </div>
 
 
-
-
-
-
-
             <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between">
                     <div>
@@ -164,31 +170,41 @@
                         <h5>Att betala</h5>
                     </div>
                     <h5 class="my-0 text-light">2500 kr</h5>
-            <!-- <span ><i class="far fa-edit"></i></span> -->
             </li>
             </ul> 
         </div>
 
-<!-- Projekt/Anbud information -->
+<!-- Projekt information -->
         <div class="col-md-8 order-md-1 ">
           <h5 class="mb-3">Beställningsuppgifter</h5>
 
           <form class="needs-validation" novalidate>
             <div class="row bg-light">
-
+              <!-- by default make todays date here -->
               <div class="col-md-3 mb-3">
-                <label for="date"><small>Order datum</small></label>
-                <input type="date" class="form-control" id="date" placeholder="" value="" required>
+                <label for=""><small>Bokningsdatum</small></label>
+                <input type="date" class="form-control" id="" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid Date is required.
                 </div>
               </div>
+              <!-- services will fetch from service page here -->
               <div class="col-md-9 mb-3">
-                <label for="project"><small>Tjänst</small></label>
-                <input type="text" class="form-control" id="project" placeholder="Sök en tjänst..." value="" required>
+                <label for=""><small>Tjänst</small></label>
+                <input type="text" class="form-control" id="" placeholder="Sök en tjänst..." value="" required>
                 <div class="invalid-feedback">
                   Obligatorisk fält.
                 </div>
+              </div>
+
+              <div class="col-md-3 mb-3">
+                <label for=""><small>Order datum</small></label>
+                <input type="date" class="form-control" id="" placeholder="" value="">
+              </div>
+
+              <div class="col-md-2 mb-3">
+                  <label for=""><small>Tid</small></label>
+                  <input type="time" class="form-control" id="" placeholder="" value="">
               </div>
             </div>
     
@@ -210,15 +226,15 @@
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="personalnumber"><small>Person/Org. #</small> </label>
-                  <input type="text" class="form-control" id="email" placeholder="Person#/Organisationsnummer">
+                  <input type="text" class="form-control" id="email" placeholder="">
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="text"><small>Email</small> </label>
-                  <input type="email" class="form-control" id="email" placeholder="Email">
+                  <input type="email" class="form-control" id="email" placeholder="">
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="text"><small>Mobil</small> </label>
-                  <input type="text" class="form-control" id="email" placeholder="Mobil">
+                  <input type="text" class="form-control" id="email" placeholder="">
                 </div>
             </div>
 
@@ -232,59 +248,13 @@
 
               <div class="col-md-7 mb-3">
                 <label for="personalnumber"><small>Adress</small> </label>
-                <input type="text" class="form-control" id="adress" placeholder="Adress">
+                <input type="text" class="form-control" id="adress" placeholder="">
               </div>
 
               <div class="col-md-1 d-flex">
-                <span class="align-self-center"><i class="fas fa-plus-circle"></i></span>
+                <span class="align-self-center" data-toggle="modal" data-target="#exampleModalLong"><i class="fas fa-plus-circle"></i></span>
               </div>
-
-<!-- Below comment out will go in modal -->
-<!-- 
-              <div class="col-md-1 mb-3">
-                <label for="text"><small>Rum</small> </label>
-                <input type="email" class="form-control" id="email" placeholder="Rum">
-              </div>
-              <div class="col-md-1 mb-3">
-                <label for="text"><small>Boyta</small> </label>
-                <input type="text" class="form-control" id="email" placeholder="Boyta">
-              </div>
-              <div class="col-md-1 mb-3">
-                <label for="text"><small>Källare/Vind</small> </label>
-                <input type="text" class="form-control" id="email" placeholder="Källare/vind">
-              </div>
-              <div class="col-md-1 mb-3">
-                <label for="text"><small>Trappor</small> </label>
-                <input type="text" class="form-control" id="email" placeholder="Trappor">
-              </div>
-              <div class="col-md-1 mb-3">
-                <label for="text"><small>Övergård</small> </label>
-                <input type="text" class="form-control" id="email" placeholder="Övergård">
-              </div>
-              <div class="col-md-1 mb-3">
-                <label for="text"><small>Hiss</small> </label>
-                <input type="text" class="form-control" id="email" placeholder="Hiss Storlek">
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="text"><small>Övrigt</small> </label>
-                <input type="text" class="form-control" id="email" placeholder="Mobil">
-              </div> -->
-
           </div>
-
-<!-- Viktiga tider -->
-    <!-- Show these information in modalbox -->
-            <!-- <div class="row">
-                    <div class="col-md-6 mb-3">
-                            <label for="date">Datum </label>
-                            <input type="date" class="form-control" id="date" placeholder="Välj datum">
-                    </div>
-                    
-                    <div class="col-md-6 mb-3">
-                            <label for="Region">Info</label>
-                            <input type="text" class="form-control" id="info" placeholder="Skriv info här...">
-                    </div>
-                </div> -->
 
                 <hr class="mb-4">
 <!-- Kund info -->
@@ -293,48 +263,110 @@
 
 
             <div class="row bg-light">
-                <div class="col-md-2 mb-3 ">
-                    <label for="customer"><small>Antal anställd</small></label>
-                    <input type="text" class="form-control" id="customer" placeholder="Välj antal anställda...">
+                <div class="col-md-2">
+                  <!-- If(user choose 2 then two fields open below choose employee) -->
+                    <label for="customer"><small>Antal anställda</small></label>
+                    <select class="custom-select d-block w-100" id="chooseEmployee" required>
+                        <option>Choose employees..</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>                        
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                      </select>
                 </div>        
                 <div class="col-md-2 mb-3">
                     <label for="Price"><small>Pris</small></label>
-                    <input type="text" class="form-control" id="customer" placeholder="Skriv ett pris här...">
-                </div>      
-                <div class="col-md-2 mb-3">
-                    <label for="customer"><small>Husarbete</small></label>
-                    <input type="text" class="form-control" id="customer" placeholder="Välj RUT/ROT...">
-                </div>      
-                <div class="col-md-1 mb-3">
-                    <label for="rut-rot"><small>Inkl.moms</small></label>
-                    <input type="checkbox" class="form-control">
-                </div>      
+                    <input type="text" class="form-control" id="customer" placeholder="">
+                </div>       
+
+                <!-- Choose employee -->
+                    <div class="col-md-12">
+                      <div class="col-md-3">
+                        <h5 class="text-danger" data-toggle="modal" data-target="#addEmployee"><i class="fas fa-times mr-3"></i><u>Välj en anställd</u></h5>
+                      </div>
+                      <div class="col-md-3">
+                          <h5 class="text-danger" data-toggle="modal" data-target="#addEmployee"><i class="fas fa-times mr-3"></i><u>Välj en anställd</u></h5>
+                      </div>
+                    </div>                   
+             </div>
+
+
+            <div class="row ">
+
+             <!-- List headings -->
+               <!-- OnClick on employees name will take user to modalbox-->
+                <div class="col-md-3 ">
+                    <small>Namn</small>
+                </div>
+                <div class="col-md-2 col-sm-3d-flex">
+                    <small class="align-self-center">Tid</small>
+                </div>
+                <div class="col-md-1 d-flex">
+                    <small class="align-self-center">Rast</small>
+                </div>
+                <div class="col-md-1 d-flex">
+                    <small class="align-self-center">Arbetstid</small>
+                </div>
+                <div class="col-md-1 d-flex">
+                    <small class="align-self-center">Betaltid</small>
+                </div>
+                <div class="col-md-1 d-flex">
+                    <small class="align-self-center">Tunglyft</small>
+                </div>
+                <!-- If(OB added then use as fa-check) else (null, nothing, empty). -->
+                <div class="col-md-1 d-flex">
+                    <small class="align-self-center">OB</small>
+                </div>
+                <!-- If(comment added then use fas fa-comment) else (far fa-comment). -->
+                <div class="col-md-1 d-flex">
+                    <small class="align-self-center"></small>
+                </div>
+                <div class="col-md-1 d-flex">
+                    <small class="align-self-center">Radera</small>
+                </div>
+                <div class="col-md-12">
+                    <hr>   
+                </div>
+              
+             <!-- List items-->
+              <div class="col-md-3 ">
+                  <h5 class="text-primary"><u>Rikard Karlsson</u></h5>
+              </div>
+              <div class="col-md-2 d-flex">
+                  <h6 class="align-self-center">08:00-12:00</h6>
+              </div>
+              <div class="col-md-1 d-flex">
+                  <h6 class="align-self-center">30</h6>
+              </div>
+              <div class="col-md-1 d-flex">
+                  <h6 class="align-self-center">7</h6>
+              </div>
+              <div class="col-md-1 d-flex">
+                  <h6 class="align-self-center">6.5</h6>
+              </div>
+              <div class="col-md-1 d-flex">
+                  <h6 class="align-self-center">300</h6>
+              </div>
+              <div class="col-md-1 d-flex">
+                  <div><i class="fas fa-check"></i></div>
+              </div>
+              <div class="col-md-1 d-flex">
+                  <div><i class="fas fa-comment"></i></div>
+              </div>
+<!-- If(comment added then use fas fa-comment) else (far fa-comment). -->
+              <div class="col-md-1 d-flex">
+                  <div><i class="fas fa-trash-alt"></i></div>
+              </div>
+
             </div>
-    
-            <hr class="mb-4">
 
-<!-- Employee time -->
-            <div class="row bg-light">
-              <div class="col-md-3 mb-3">
-                  <label for="customer"><small>Anställd</small></label>
-                  <input type="text" class="form-control" id="customer" placeholder="Välj en anställda...">
-              </div>  
-              <div class="col-md-6 mb-3">
-                  <label for="customer"><small>Anställd</small></label>
-                  <input type="text" class="form-control" id="customer" placeholder="Välj antal anställda...">
-              </div>  
-              <div class="col-md-3 mb-3">
-                  <label for="customer"><small>Kommentar</small></label>
-                  <input type="text" class="form-control" id="customer" placeholder="Skriv en kommentar">
-              </div>  
-
-
-            </div>
-
-
-
-
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Spara</button>
+            <button class="btn btn-primary btn-lg btn-block mt-5" type="submit">Spara</button>
           </form>
         </div>
       </div>
@@ -345,8 +377,406 @@
     </div>
 
 
+<!-- Adress modal -->
+              <!-- Modal add address extra fields here -->
+              <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Adress Title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Model body goes here -->
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="text"><small>Rum</small> </label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="text"><small>Boyta</small> </label>
+                                <input type="text" class="form-control" id="email" placeholder="">
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="text"><small>Källare/Vind</small> </label>
+                                <input type="text" class="form-control" id="email" placeholder="">
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="text"><small>Trappor</small> </label>
+                                <input type="text" class="form-control" id="email" placeholder="">
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="text"><small>Övergård</small> </label>
+                                <input type="text" class="form-control" id="email" placeholder="">
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="text"><small>Hiss</small> </label>
+                                <input type="text" class="form-control" id="email" placeholder="">
+                              </div>
+                              <div class="col-md-12 mb-3">
+                                <label for="text"><small>Övrigt</small> </label>
+                                <input type="text" class="form-control" id="email" placeholder="">
+                              </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
+<!-- Employee -->
+              <!-- Modal Choose employee here -->
+                <div class="modal fade" id="addEmployee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Add Employee</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Model body goes here -->
+                          <div class="row">
+                              <div class="col-md-12 mb-3">
+                                  <label for="employee"><small>Anställd</small></label>
+                                  <input type="text" class="form-control" id="employee" placeholder="Välj en anställda...">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="starttime"><small>Starttid</small></label>
+                                    <input type="text" class="form-control" id="startime" placeholder="00:00">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="endtime"><small>Sluttid</small></label>
+                                    <input type="text" class="form-control" id="endtime" placeholder="00:00">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="break"><small>Rast</small></label>
+                                    <input type="text" class="form-control" id="break" placeholder="00:00">
+                                </div>
+                                <!-- Not ediable -->
+                                <div class="col-md-4 mb-3">
+                                    <label for="worktime"><small>Arbetstid</small></label>
+                                    <input type="text" class="form-control" id="worktime" placeholder="">
+                                </div>
+                                <!-- Not ediable -->
+                                <div class="col-md-4 mb-3">
+                                    <label for="total"><small>Total</small></label>
+                                    <input type="text" class="form-control" id="total" placeholder="">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="heavylift"><small>Tunglyft</small></label>
+                                    <input type="text" class="form-control" id="heavylift" placeholder="">
+                                </div>
+                                <!-- show icon if any of option is choosen in this page -->
+                                <div class="col-md-4 mb-3">
+                                    <label for="ob"><small>Välj OB</small></label>
+                                    <select class="custom-select d-block w-100" id="ob-type" required>
+                                        <option></option>
+                                        <option>Extra</option>
+                                        <option>OB 1</option>
+                                        <option>OB 2</option>
+                                      </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                  <label for="ob"><small>Tid</small></label>
+                                  <input type="text" class="form-control" id="ob" placeholder="00:00">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                  <label for="other"><small>Övrigt</small></label>
+                                  <input type="text" class="form-control" id="other" placeholder="Övrigt">
+                                </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                          <button type="button" class="btn btn-primary">Spara</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+<!-- Customer need -->
+              <!-- Modal Choose multiple options -->
+              <div class="modal fade" id="customerNeed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add Employee</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Model body goes here -->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Med tipKont.</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Kartonger</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Städ</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Magasinering</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Övrigt Material ut</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Byte med annan bil</label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                        <button type="button" class="btn btn-primary">Spara</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<!-- Seen us-->
+<!-- Modal Choose multiple options -->
+            <div class="modal fade" id="seenUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Sett oss</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Model body goes here -->
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Nätet</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Annons</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Mäklare</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Bil</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Tidigare kund</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Hitta.se</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Cykel</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Rekommenderad</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Visitkort</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Flyer</label>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">City self storage</label>
+                            </div>
+                            <div class="col-md-12 mb-3 d-flex">
+                                <input type="checkbox" class="form-check-input" id="">
+                                <label class="form-check-label mt-2" for="">Lokal & trottoarpratare</label>
+                            </div>
+
+                          </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                      <button type="button" class="btn btn-primary">Spara</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+<!-- Work description -->
+<!-- Modal Choose multiple options -->
+              <div class="modal fade" id="workDescription" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Arbetsbeskrivning</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Model body goes here -->
+                        <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-md-4 mb-3 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Kontant betalning</label>
+                              </div>
+                              <div class="col-md-4 mb-3 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Mailat oss</label>
+                              </div>
+                              <div class="col-md-4 mb-3 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Restid</label>
+                              </div>
+                              <div class="col-md-4 mb-3 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">3h minideb.</label>
+                              </div>
+                              <div class="col-md-4 mb-3 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Försäkringsvillkor</label>
+                              </div>
+                              <div class="col-md-4 mb-4 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Tunglyftkostnad</label>
+                              </div>
+                              <div class="col-md-6 mb-4 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Varsdag, 50% efter 17:00</label>
+                              </div>
+                              <div class="col-md-6 mb-4 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Skada inom 7 dagar</label>
+                              </div>
+                              <div class="col-md-6 mb-4 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Helg, 50% efter 18:00</label>
+                              </div>
+                              <div class="col-md-12 mb-4 d-flex">
+                                  <input type="checkbox" class="form-check-input" id="">
+                                  <label class="form-check-label mt-2" for="">Vid avb. senare än 72 h deb. kunden för 3 h</label>
+                              </div>
+                            </div>
+                          </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                        <button type="button" class="btn btn-primary">Spara</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<!-- Items/Articles -->
+<!-- Modal Choose multiple items -->
+                <div class="modal fade" id="addItems" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Artiklar</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Model body goes here -->
+                          <div class="container-fluid">
+                              <div class="row">
+                                <div class="col-md-4 mb-3 d-flex">
+                                    <input type="checkbox" class="form-check-input" id="">
+                                    <label class="form-check-label mt-2" for="">RUT</label>
+                                </div>
+                                <div class="col-md-4 mb-3 d-flex">
+                                    <input type="checkbox" class="form-check-input" id="">
+                                    <label class="form-check-label mt-2" for="">Fakturera ej </label>
+                                </div>
+                              <div class="col-md-12 mb-3">
+                                <label for=""><small>Artikel</small></label>
+                                <input type="text" class="form-control" id="employee" placeholder="Sök en artikel...">
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                  <label for=""><small>Enhet</small></label>
+                                  <input type="text" class="form-control" id="employee" placeholder="">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for=""><small>Antal</small></label>
+                                    <input type="text" class="form-control" id="employee" placeholder="">
+                                </div>            
+                                <div class="col-md-4 mb-3">
+                                    <label for=""><small>Moms</small></label>
+                                    <input type="text" class="form-control" id="employee" placeholder="">
+                                </div>    
+                                <div class="col-md-4 mb-3">
+                                    <label for=""><small>Typ</small></label>
+                                    <input type="text" class="form-control" id="employee" placeholder="">
+                                </div>  
+                                <div class="col-md-4 mb-3">
+                                    <label for=""><small>Rapportera timmar</small></label>
+                                    <input type="number" class="form-control" id="employee" placeholder="">
+                                </div>  
+                          </div>
+                          <div class="row d-flex ">
+                              <div class="col-md-3 align-self-center">
+                                  <label for=""><small>VAT</small></label>
+                                  <h6><strong>20</strong> kr</h6>
+                              </div>  
+                              <div class="col-md-3 align-self-center">
+                                  <label for=""><small>Skattereduktion</small></label>
+                                  <h6><strong>50</strong> kr</h6>
+                              </div>  
+                              <div class="col-md-3 align-self-center">
+                                  <label for=""><small>Total</small></label>
+                                  <h6><strong>100</strong> kr</h6>
+                              </div>  
+                              <div class="col-md-3 bg-warning d-flex">
+                                <div class="align-self-center align-items-center">
+                                    <label for=""><small>Att Betala</small></label>
+                                    <strong><h4>50 kr</h4></strong>
+                                </div>
+
+                              </div>  
+                          </div>
+                          </div>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                          <button type="button" class="btn btn-primary">Spara</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
